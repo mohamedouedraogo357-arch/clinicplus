@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Site cabinet médical généraliste — Projet CI/CD GitHub Actions",
   "scripts": {
-    "lint:html": "htmlhint src/**/*.html",
-    "lint:css":  "stylelint src/css/**/*.css",
-    "lint":      "npm run lint:html && npm run lint:css"
+    "lint:html": "htmlhint \"src/**/*.html\"",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "lint:css:fix": "stylelint \"src/css/**/*.css\" --fix",
+    "lint": "npm run lint:html && npm run lint:css"
   },
   "devDependencies": {
     "htmlhint": "^1.1.4",
