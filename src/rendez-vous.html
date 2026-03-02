@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ClinicPlus — Prenez rendez-vous en ligne avec nos médecins généralistes." />
+  <title>ClinicPlus — Prendre rendez-vous</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <div class="logo-icon">🏥</div>
+        Clinic<span>Plus</span>
+      </a>
+      <ul class="navbar__links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="medecins.html">Médecins</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="rendez-vous.html" class="active">Rendez-vous</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="navbar__cta">
+        <a href="rendez-vous.html" class="btn btn--primary">📅 Prendre RDV</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a> <span>/</span> <span>Rendez-vous</span>
+    </div>
+    <h1>Prendre rendez-vous</h1>
+    <p>Remplissez le formulaire ci-dessous — nous vous confirmons sous 2h</p>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="rdv-layout">
+
+        <!-- ── FORMULAIRE ── -->
+        <div class="rdv-form">
+          <h2>Votre demande de RDV</h2>
+          <p>Tous les champs marqués d'un * sont obligatoires.</p>
+
+          <form id="rdv-form" action="#" method="post">
+
+            <!-- SECTION 1 : Choix médecin & motif -->
+            <div style="margin-bottom:28px; padding-bottom:24px; border-bottom:1px solid var(--gray-200);">
+              <h3 style="font-size:1rem; margin-bottom:20px; color:var(--green-deep);">① Choisir le médecin et le motif</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="medecin">Médecin souhaité *</label>
+                  <select id="medecin" name="medecin" required>
+                    <option value="">-- Choisir --</option>
+                    <option>Dr. Karim OUEDRAOGO — Généraliste</option>
+                    <option>Dr. Amina Touré — Généraliste</option>
+                    <option>Dr. Sofiane SAWADOGO — Pédiatre</option>
+                    <option>Dr. Leila COMPAORE — Gériatrie</option>
+                    <option>Dr. Yacine YALGHA — Sport</option>
+                    <option>Dr. Nadia TRAORE — Généraliste</option>
+                    <option>Peu importe (premier disponible)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="motif">Motif de consultation *</label>
+                  <select id="motif" name="motif" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option>Consultation générale</option>
+                    <option>Vaccination</option>
+                    <option>Bilan de santé</option>
+                    <option>Suivi maladie chronique</option>
+                    <option>Certificat médical</option>
+                    <option>Pédiatrie (enfant)</option>
+                    <option>ECG</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date-rdv">Date souhaitée *</label>
+                  <input type="date" id="date-rdv" name="date" required />
+                </div>
+                <div class="form-group">
+                  <label for="heure">Créneau préféré *</label>
+                  <select id="heure" name="heure" required>
+                    <option value="">-- Heure --</option>
+                    <option>08:00 – 08:30</option>
+                    <option>08:30 – 09:00</option>
+                    <option>09:00 – 09:30</option>
+                    <option>09:30 – 10:00</option>
+                    <option>10:00 – 10:30</option>
+                    <option>10:30 – 11:00</option>
+                    <option>11:00 – 11:30</option>
+                    <option>11:30 – 12:00</option>
+                    <option>14:00 – 14:30</option>
+                    <option>14:30 – 15:00</option>
+                    <option>15:00 – 15:30</option>
+                    <option>15:30 – 16:00</option>
+                    <option>16:00 – 16:30</option>
+                    <option>16:30 – 17:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 2 : Infos patient -->
+            <div style="margin-bottom:28px; padding-bottom:24px; border-bottom:1px solid var(--gray-200);">
+              <h3 style="font-size:1rem; margin-bottom:20px; color:var(--green-deep);">② Vos informations personnelles</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="civilite">Civilité *</label>
+                  <select id="civilite" name="civilite" required>
+                    <option value="">--</option>
+                    <option>M.</option>
+                    <option>Mme</option>
+                    <option>Enfant</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="prenom">Prénom *</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nom">Nom de famille *</label>
+                  <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+                </div>
+                <div class="form-group">
+                  <label for="naissance">Date de naissance *</label>
+                  <input type="date" id="naissance" name="naissance" required />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="tel">Téléphone *</label>
+                  <input type="tel" id="tel" name="tel" placeholder="0X XX XX XX XX" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="votre@email.com" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="type-patient">Êtes-vous déjà patient chez nous ?</label>
+                <select id="type-patient" name="type-patient">
+                  <option value="new">Non, c'est ma première visite</option>
+                  <option value="existing">Oui, je suis déjà patient</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- SECTION 3 : Notes -->
+            <div style="margin-bottom:32px;">
+              <h3 style="font-size:1rem; margin-bottom:20px; color:var(--green-deep);">③ Informations complémentaires</h3>
+              <div class="form-group">
+                <label for="notes">Décrivez brièvement votre motif</label>
+                <textarea id="notes" name="notes" placeholder="Ex : fièvre depuis 3 jours, renouvellement d'ordonnance, bilan annuel..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="allergies">Allergies médicamenteuses connues</label>
+                <input type="text" id="allergies" name="allergies" placeholder="Ex : pénicilline, aspirine... (laisser vide si aucune)" />
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:flex-end;">
+              <button type="submit" class="btn btn--primary btn--lg">
+                📅 Confirmer ma demande de RDV
+              </button>
+            </div>
+          </form>
+
+          <!-- MESSAGE SUCCÈS (caché par défaut) -->
+          <div id="success-msg" style="display:none; margin-top:24px; padding:24px; background:var(--green-soft); border-radius:var(--radius); border:1px solid var(--green-light); text-align:center;">
+            <div style="font-size:2.5rem; margin-bottom:12px;">✅</div>
+            <h3 style="color:var(--green-deep); margin-bottom:8px;">Demande envoyée avec succès !</h3>
+            <p style="color:var(--gray-600);">Nous vous contacterons sous 2h pour confirmer votre rendez-vous. Merci de votre confiance.</p>
+          </div>
+        </div>
+
+        <!-- ── INFORMATIONS PRATIQUES ── -->
+        <div class="rdv-info">
+
+          <div class="urgency-card">
+            <h3>🚨 Urgence médicale ?</h3>
+            <p>Pour toute urgence vitale, n'attendez pas — appelez immédiatement :</p>
+            <span class="urgency-phone">📞 15 (SAMU)</span>
+            <a href="#" class="btn btn--white" style="width:100%; justify-content:center;">Permanence de soins →</a>
+          </div>
+
+          <div class="info-card">
+            <h3>🕐 Horaires du cabinet</h3>
+            <div class="info-item">
+              <div class="info-icon">📅</div>
+              <div>
+                <strong>Lundi — Vendredi</strong>
+                <span>8h00 à 18h00</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📅</div>
+              <div>
+                <strong>Samedi</strong>
+                <span>8h00 à 13h00</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">🚫</div>
+              <div>
+                <strong>Dimanche & jours fériés</strong>
+                <span>Fermé (urgences : 15)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>📋 Ce qu'il faut apporter</h3>
+            <div class="info-item">
+              <div class="info-icon">🪪</div>
+              <div>
+                <strong>Pièce d'identité</strong>
+                <span>CIN ou passeport</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">💊</div>
+              <div>
+                <strong>Liste des médicaments</strong>
+                <span>Traitements en cours</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📁</div>
+              <div>
+                <strong>Anciens examens</strong>
+                <span>Résultats d'analyses récents</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">📔</div>
+              <div>
+                <strong>Carnet de santé</strong>
+                <span>Pour les consultations enfants</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>📍 Nous trouver</h3>
+            <div class="map-placeholder">
+              <span>🗺</span>
+              <p>12 rue de la Santé, Alger</p>
+            </div>
+            <p style="font-size:.85rem; color:var(--gray-600); margin-top:12px;">
+              🚌 Bus lignes 32, 45 — Arrêt "Clinique"<br>
+              🚗 Parking gratuit disponible
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="logo"><span>🏥</span> Clinic<span>Plus</span></div>
+        <p>Cabinet médical généraliste au service de votre santé depuis 2009.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="medecins.html">Médecins</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="rendez-vous.html">Rendez-vous</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Consultation générale</a></li>
+          <li><a href="services.html">Vaccination</a></li>
+          <li><a href="services.html">Bilan de santé</a></li>
+          <li><a href="services.html">Pédiatrie</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 Ouagadougou</a></li>
+          <li><a href="#">📞 +226 XX XX XX</a></li>
+          <li><a href="#">✉ contact@clinicplus</a></li>
+          <li><a href="#">🕐 Lun–Sam : 8h–18h</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 ClinicPlus. Tous droits réservés.</span>
+      <span>Votre santé, notre engagement ✚</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
